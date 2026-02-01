@@ -23,7 +23,20 @@ export default function Navigation() {
 
   const menuItems = [
     { label: 'About', href: '#about' },
-    { label: 'Products', href: '#products', hasDropdown: true },
+    {
+      label: 'Products',
+      children: [
+        { label: 'Products Overview', href: '#products' },
+          {
+          label: 'Socks',
+            children: [
+            { label: 'Men', href: '#socks-men' },
+            { label: 'Women', href: '#socks-women' },
+            { label: 'Kids', href: '#socks-kids' },
+      ],
+    },
+  ],
+  },
     { label: 'Purpose', href: '#purpose', hasDropdown: true },
     { label: 'Culture', href: '#culture' },
     { label: 'Stories', href: '#stories' },
